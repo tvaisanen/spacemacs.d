@@ -2,24 +2,16 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
-
-
-;; (use-package spaceline-all-the-icons :ensure t)
-
-
-
 (defun dotspacemacs/layers ()
   "Layer configuration:
 This function should only modify configuration layer settings."
-
   (setq-default
    ;; Base distribution to use. This is a layer contained in the directory
    ;; `+distribution'. For now available distributions are `spacemacs-base'
    ;; or `spacemacs'. (default 'spacemacs)
    dotspacemacs-distribution 'spacemacs
 
-
-  ;; Lazy installation of layers (i.e. layers are installed only when a file
+   ;; Lazy installation of layers (i.e. layers are installed only when a file
    ;; with a supported type is opened). Possible values are `all', `unused'
    ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
    ;; not listed in variable `dotspacemacs-configuration-layers'), `all' will
@@ -87,7 +79,6 @@ This function should only modify configuration layer settings."
      ;; https://develop.spacemacs.org/layers/+lang/csv/README.html
      csv
 
-
      ;; For Spacemacs configuration files and packages
      emacs-lisp
 
@@ -124,12 +115,9 @@ This function should only modify configuration layer settings."
      (helm :variables
            helm-follow-mode-persistent t)
 
-     (typescript :variables)
-
      html
      ;; javascript
-     ;; json
-     typescript
+     json
 
      ;; Clojure specific configuration in dotspacemacs/user-config
      ;; lsp

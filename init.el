@@ -79,6 +79,8 @@ This function should only modify configuration layer settings."
      ;; https://develop.spacemacs.org/layers/+lang/csv/README.html
      csv
 
+     docker
+
      ;; For Spacemacs configuration files and packages
      emacs-lisp
 

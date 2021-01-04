@@ -130,22 +130,22 @@ This function should only modify configuration layer settings."
 
      ;; Configuration: https://github.com/seagle0128/doom-modeline#customize
 
-     (modeline :variables format spaceline-all-the-icons-theme)
-     (spaceline-all-the-icons
-       :fetcher github
-       :repo "domtronn/spaceline-all-the-icons.el")
-      (spacemacs-modeline :variables
-                          format spaceline-all-the-icons-theme
-                          doom-modeline-height 12
-                          doom-modeline-bar-width 1
-                          doom-modeline-buffer-file-name-style 'relative-to-project
-                          doom-modeline-display-default-persp-name t
-                          doom-modeline-buffer-encoding nil
-                          doom-modeline-github t
-                          doom-modeline-gnus nil
-                          doom-modeline-irc nil
-                          doom-modeline-env-version t
-                         doom-modeline-modal-icon nil)
+     ;; (modeline :variables format spaceline-all-the-icons-theme)
+     ;; (spaceline-all-the-icons
+     ;;   :fetcher github
+     ;;   :repo "domtronn/spaceline-all-the-icons.el")
+     ;;  (spacemacs-modeline :variables
+     ;;                      format spaceline-all-the-icons-theme
+     ;;                      doom-modeline-height 12
+     ;;                      doom-modeline-bar-width 1
+     ;;                      doom-modeline-buffer-file-name-style 'relative-to-project
+     ;;                      doom-modeline-display-default-persp-name t
+     ;;                      doom-modeline-buffer-encoding nil
+     ;;                      doom-modeline-github t
+     ;;                      doom-modeline-gnus nil
+     ;;                      doom-modeline-irc nil
+     ;;                      doom-modeline-env-version t
+     ;;                     doom-modeline-modal-icon nil)
 
      spaceline
 
@@ -369,7 +369,7 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(smyx spacemacs-dark)
+   dotspacemacs-themes '(doom-palenight smyx spacemacs-dark)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -1204,9 +1204,13 @@ before packages are loaded."
   ;; Enable the new eshell prompt
   (setq eshell-prompt-function 'esh-prompt-func)
 
-  (use-package spaceline-all-the-icons
-    :after spaceline
-    :config (spaceline-all-the-icons-theme))
+  ;; (use-package spaceline-all-the-icons
+  ;;   :after spaceline
+  ;;   :config (spaceline-all-the-icons-theme))
+
+  (use-package doom-modeline
+    :ensure t
+    :init (doom-modeline-mode 1))
 
   ;; End of Eshell
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
